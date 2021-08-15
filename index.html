@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>Primitive Piano Player</h1>
+    <label for="musical-pieces">Choose a musical piece:</label>
+    <select id="musical-pieces" disabled></select>
+    <button id="play-piece" disabled>Play piece</button>
+    <button id="stop-piece" disabled>Stop piece</button>
+    <script src="src/index.js"></script>
+
+    <svg
+      id="piano-keyboard"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1300 150"
+      style="margin-top: 8px;"
+    >
+      <defs>
+        <style>
+          .cls-1 {
+            fill: #fff;
+          }
+
+          .cls-1,
+          .cls-2 {
+            stroke: #000;
+            stroke-miterlimit: 10;
+          }
+
+          .pressed {
+            fill: red;
+          }
+        </style>
+      </defs>
+      <rect id="108" class="cls-1" x="1196" y="1" width="23" height="149" />
+      <rect id="107" class="cls-1" x="1172" y="1" width="24" height="149" />
+      <rect id="105" class="cls-1" x="1149" y="1" width="23" height="149" />
+      <rect id="103" class="cls-1" x="1126" y="1" width="23" height="149" />
+      <rect id="101" class="cls-1" x="1102" y="1" width="24" height="149" />
+      <rect id="100" class="cls-1" x="1079" y="1" width="23" height="149" />
+      <rect id="98" class="cls-1" x="1055" y="1" width="24" height="149" />
+      <rect id="96" class="cls-1" x="1032" y="1" width="23" height="149" />
+      <rect id="95" class="cls-1" x="1008" y="1" width="24" height="149" />
+      <rect id="93" class="cls-1" x="985" y="1" width="23" height="149" />
+      <rect id="91" class="cls-1" x="962" y="1" width="23" height="149" />
+      <rect id="89" class="cls-1" x="938" y="1" width="24" height="149" />
+      <rect id="88" class="cls-1" x="915" y="1" width="23" height="149" />
+      <rect id="86" class="cls-1" x="891" y="1" width="24" height="149" />
+      <rect id="84" class="cls-1" x="868" y="1" width="23" height="149" />
+      <rect id="83" class="cls-1" x="844" y="1" width="24" height="149" />
+      <rect id="81" class="cls-1" x="821" y="1" width="23" height="149" />
+      <rect id="79" class="cls-1" x="798" y="1" width="23" height="149" />
+      <rect id="77" class="cls-1" x="774" y="1" width="24" height="149" />
+      <rect id="76" class="cls-1" x="751" y="1" width="23" height="149" />
+      <rect id="74" class="cls-1" x="727" y="1" width="24" height="149" />
+      <rect id="72" class="cls-1" x="704" y="1" width="23" height="149" />
+      <rect id="71" class="cls-1" x="680" y="1" width="24" height="149" />
+      <rect id="69" class="cls-1" x="657" y="1" width="23" height="149" />
+      <rect id="67" class="cls-1" x="634" y="1" width="23" height="149" />
+      <rect id="65" class="cls-1" x="610" y="1" width="24" height="149" />
+      <rect id="64" class="cls-1" x="587" y="1" width="23" height="149" />
+      <rect id="62" class="cls-1" x="563" y="1" width="24" height="149" />
+      <rect id="60" class="cls-1" x="540" y="1" width="23" height="149" />
+      <rect id="59" class="cls-1" x="516" y="1" width="24" height="149" />
+      <rect id="57" class="cls-1" x="493" y="1" width="23" height="149" />
+      <rect id="55" class="cls-1" x="470" y="1" width="23" height="149" />
+      <rect id="53" class="cls-1" x="446" y="1" width="24" height="149" />
+      <rect id="52" class="cls-1" x="423" y="1" width="23" height="149" />
+      <rect id="50" class="cls-1" x="399" y="1" width="24" height="149" />
+      <rect id="48" class="cls-1" x="376" y="1" width="23" height="149" />
+      <rect id="47" class="cls-1" x="352" y="1" width="24" height="149" />
+      <rect id="45" class="cls-1" x="329" y="1" width="23" height="149" />
+      <rect id="43" class="cls-1" x="306" y="1" width="23" height="149" />
+      <rect id="41" class="cls-1" x="282" y="1" width="24" height="149" />
+      <rect id="40" class="cls-1" x="259" y="1" width="23" height="149" />
+      <rect id="38" class="cls-1" x="235" y="1" width="24" height="149" />
+      <rect id="36" class="cls-1" x="212" y="1" width="23" height="149" />
+      <rect id="35" class="cls-1" x="188" y="1" width="24" height="149" />
+      <rect id="33" class="cls-1" x="165" y="1" width="23" height="149" />
+      <rect id="31" class="cls-1" x="142" y="1" width="23" height="149" />
+      <rect id="29" class="cls-1" x="118" y="1" width="24" height="149" />
+      <rect id="28" class="cls-1" x="95" y="1" width="23" height="149" />
+      <rect id="26" class="cls-1" x="71" y="1" width="24" height="149" />
+      <rect id="24" class="cls-1" x="48" y="1" width="23" height="149" />
+      <rect id="23" class="cls-1" x="24" y="1" width="24" height="149" />
+      <rect id="21" class="cls-1" x="1" y="1" width="23" height="149" />
+      <rect id="22" class="cls-2" x="17.5" y="1" width="13" height="98" />
+      <rect id="25" class="cls-2" x="64.5" y="1" width="13" height="98" />
+      <rect id="27" class="cls-2" x="88.5" y="1" width="13" height="98" />
+      <rect id="30" class="cls-2" x="135.5" y="1" width="13" height="98" />
+      <rect id="32" class="cls-2" x="158.5" y="1" width="13" height="98" />
+      <rect id="34" class="cls-2" x="181.5" y="1" width="13" height="98" />
+      <rect id="37" class="cls-2" x="228.5" y="1" width="13" height="98" />
+      <rect id="39" class="cls-2" x="252.5" y="1" width="13" height="98" />
+      <rect id="42" class="cls-2" x="299.5" y="1" width="13" height="98" />
+      <rect id="44" class="cls-2" x="322.5" y="1" width="13" height="98" />
+      <rect id="46" class="cls-2" x="345.5" y="1" width="13" height="98" />
+      <rect id="49" class="cls-2" x="392.5" y="1" width="13" height="98" />
+      <rect id="51" class="cls-2" x="416.5" y="1" width="13" height="98" />
+      <rect id="54" class="cls-2" x="463.5" y="1" width="13" height="98" />
+      <rect id="56" class="cls-2" x="486.5" y="1" width="13" height="98" />
+      <rect id="58" class="cls-2" x="509.5" y="1" width="13" height="98" />
+      <rect id="61" class="cls-2" x="556.5" y="1" width="13" height="98" />
+      <rect id="63" class="cls-2" x="580.5" y="1" width="13" height="98" />
+      <rect id="66" class="cls-2" x="627.5" y="1" width="13" height="98" />
+      <rect id="68" class="cls-2" x="650.5" y="1" width="13" height="98" />
+      <rect id="70" class="cls-2" x="673.5" y="1" width="13" height="98" />
+      <rect id="73" class="cls-2" x="720.5" y="1" width="13" height="98" />
+      <rect id="75" class="cls-2" x="744.5" y="1" width="13" height="98" />
+      <rect id="78" class="cls-2" x="791.5" y="1" width="13" height="98" />
+      <rect id="80" class="cls-2" x="814.5" y="1" width="13" height="98" />
+      <rect id="82" class="cls-2" x="837.5" y="1" width="13" height="98" />
+      <rect id="85" class="cls-2" x="884.5" y="1" width="13" height="98" />
+      <rect id="87" class="cls-2" x="908.5" y="1" width="13" height="98" />
+      <rect id="90" class="cls-2" x="955.5" y="1" width="13" height="98" />
+      <rect id="92" class="cls-2" x="978.5" y="1" width="13" height="98" />
+      <rect id="94" class="cls-2" x="1001.5" y="1" width="13" height="98" />
+      <rect id="97" class="cls-2" x="1048.5" y="1" width="13" height="98" />
+      <rect id="99" class="cls-2" x="1072.5" y="1" width="13" height="98" />
+      <rect id="102" class="cls-2" x="1119.5" y="1" width="13" height="98" />
+      <rect id="104" class="cls-2" x="1142.5" y="1" width="13" height="98" />
+      <rect id="106" class="cls-2" x="1165.5" y="1" width="13" height="98" />
+    </svg>
+  </body>
+</html>
